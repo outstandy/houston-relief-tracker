@@ -1,0 +1,51 @@
+header.tracker__header
+  .wrapper
+    h1 Recovery <span class="callout">Status Tracker<span>
+
+.wrapper
+
+  .tracker__content
+    .tracker__right
+      .tracker__update-callout
+        .tracker__timestamp
+          p.time 10:10 PM
+          p.date Thursday, 9/9/2017
+        p.tracker__update-details 
+          | Updates will be sent to #[a(href="#") 713&#8209;555&#8209;1212] and #[a(href="#") harveystationhouston@gmail.com.]
+        a.tracker__button(href="#") Check for updates
+        
+    .tracker__left
+      .tracker__alert--first-time
+        p 
+          | #[strong Since this is your first time completing the tracker,] please start by confirming that your area has been declared for FEMA assistance. FEMA is the Federal Emergency Management Agency. When the US President makes a Declaration of Disaster, FEMA administers relief for individuals and business owners who sustained damage and losses.
+        
+      #intro.tracker__section
+        p Hi, {name}
+
+        p Thanks for completing the survey, designed to deliver just the info you need.
+
+        p Since it’s your first time, please start by confirming that your area has been declared for FEMA assistance. FEMA is the Federal Emergency Management Agency. When the President makes a Declaration of Disaster, FEMA administers relief for individuals and business owners who sustained damage and losses.
+        
+      #what-to-do.tracker__section
+        h2 Do
+
+        ol.tracker__list
+          li.list-item
+            input(type="checkbox" id="item1" name="item1" value="item1")
+            label(for="item1")
+              | Find short-term shelter close to 1301 Fannin St on this map and this site
+          li.list-item
+            input(type="checkbox" id="item2" name="item2" value="item2")
+            label
+              | Register for disaster assistance at FEMA
+        
+      #know.tracker__section
+        h2 Know
+        
+      #weather.tracker__section
+        iframe#forecast_embed(frameborder="0" height="245" width="100%" src="//forecast.io/embed/#lat=42.3583&lon=-71.0603&name=Downtown Boston")
+      
+      #more-information.tracker__section
+        h2 More
+        p Call 9-1-1 for emergencies requiring immediate assistance from the police/sheriff, the fire department or an ambulance. 
+        p If you are ever in doubt of whether a situation is an emergency, call 9-1-1. Be safe and let the 9-1-1 call taker determine if you need emergency assistance.
