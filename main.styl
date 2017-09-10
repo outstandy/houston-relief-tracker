@@ -154,6 +154,10 @@ strong
         &:after
           border-color: $purple--dark
 
+      &.open
+        &:after
+          transform: rotate(135deg)
+
   &__alert
     &--first-time
       border: 1px solid $red
@@ -176,10 +180,14 @@ strong
     background: white
     border: 1px solid $purple
     border-radius: $corners
+    height: 60px
     margin-bottom: $space--big
     overflow: hidden
     padding: 0 $space
     position: relative
+
+    &.open
+      height: 100%
 
 .checkbox[type="checkbox"]
   opacity: 0
