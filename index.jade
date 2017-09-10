@@ -28,24 +28,145 @@ header.tracker__header
         
       #what-to-do.tracker__section
         h2 Do
-
         ol.tracker__list
           li.list-item
-            input(type="checkbox" id="item1" name="item1" value="item1")
-            label(for="item1")
-              | Find short-term shelter close to 1301 Fannin St on this map and this site
+            input.checkbox(type="checkbox" id="item1" name="item1" value="item1")
+            label.label(for="item1")
+              | Find short-term shelter close to 1301 Fannin St #[a(href="https://johnnyqbui.github.io/Houston-Shelters/") on this map] and #[a(href="http://www.chron.com/news/houston-weather/hurricaneharvey/article/houston-shelters-hurricane-harvey-12012951.php") this site.]
+          
           li.list-item
-            input(type="checkbox" id="item2" name="item2" value="item2")
-            label
-              | Register for disaster assistance at FEMA
+            input.checkbox(type="checkbox" id="item2" name="item2" value="item2")
+            label.label(for="item2")
+              | #[a(href="http://www.DisasterAssistance.gov") Register for disaster assistance at FEMA]
+              
+          li.list-item
+            input.checkbox(type="checkbox" id="item3" name="item3" value="item3")
+            label.label(for="item3")
+              | Get dialysis or related procedures at TEEC toll-free at #[a(href="tel:8664073773") 866-407-ESRD] or #[a(href="www.texasteec.org") www.texasteec.org]
+          
+          li.list-item
+            input.checkbox(type="checkbox" id="item4" name="item4" value="item4")
+            label.label(for="item4")
+              | #[a(href="https://www.fema.gov/housing-resources") Find long-term housing resources at FEMA]
+
+          li.list-item
+            input.checkbox(type="checkbox" id="item5" name="item5" value="item5")
+            label.label(for="item5")
+              | #[a(href="http://www.houstonisd.org/harvey") Find school schedules at HISD] 
+
+          li.list-item
+            input.checkbox(type="checkbox" id="item6" name="item6" value="item6")
+            label.label(for="item6")
+              | #[a(href="http://www.findmytowedcar.com") Locate your automobile,] if towed by the City of Houston
+
+          li.list-item
+            input.checkbox(type="checkbox" id="item7" name="item7" value="item7")
+            label.label(for="item7")
+              | Find long-term food supplies at FEMA
+
+          li.list-item
+            input.checkbox(type="checkbox" id="item8" name="item8" value="item8")
+            label.label(for="item8")
+              | #[a(href="https://www.texasrescuemap.com/muckmap") Find mucking resources and cleanup tips at Texas Muck Map]
+
         
       #know.tracker__section
         h2 Know
+        ul.tracker__list
+          li.list-item 
+            | The 10 p.m. curfew has been lifted, but not for West Houston below the Addicks and Barker dams under mandatory evacuation order
+          li.list-item
+            | #[a(href="http://asd.fema.gov/inter/locator/home.htm") You can get help in person from a FEMA Disaster Recovery Center]
+          li.list-item
+            | #[a(href="https://www.fema.gov/media-library-data/1504483560615-c91b07f455be16d5eff4cf30f3b82dfe/FINAL-9.3-version-after-applying-01_large.jpg") What to expect after you apply for FEMA assistance.]
+          li.list-item
+            | #[a(href="http://www.fema.gov/mobile-app") FEMA has an app] with additional resources
+          li.list-item
+            | FEMA can help you with needs not covered by your insurance or give you money while you wait on insurance money
+          li.list-item
+            | #[a(href="http://www.ushospitalfinder.com/hospitals/search?search_query=77002&lng=-95.37040089999999&lat=29.752554&cgeo=") Find the nearest hospitals]
+          li.list-item
+            | #[a(href="http://www.bakerbotts.com/aboutus/harvey-crisis-response-group/harvey-crisis-response-guide") Find info about handling property damage] at this private company’s site
+          li.list-item
+            | #[a(href="https://www.fema.gov/disaster/4332") FEMA has Tips for Clean-Up]
+          li.list-item
+            | #[a(href="https://www.airbnb.com/disaster-response") Airbnb has a Disaster Response Program] that may help locate housing
+          li.list-item
+            | Find volunteer lawyers at Houston Volunteer Lawyers and Lone Star Legal Aid
+
         
       #weather.tracker__section
-        iframe#forecast_embed(frameborder="0" height="245" width="100%" src="//forecast.io/embed/#lat=42.3583&lon=-71.0603&name=Downtown Boston")
+        iframe#forecast_embed(frameborder="0" height="245" width="100%" src="//forecast.io/embed/#lat=29.7604&lon=-95.3698&name=Houston&color=#1E2383")
       
       #more-information.tracker__section
         h2 More
         p Call 9-1-1 for emergencies requiring immediate assistance from the police/sheriff, the fire department or an ambulance. 
         p If you are ever in doubt of whether a situation is an emergency, call 9-1-1. Be safe and let the 9-1-1 call taker determine if you need emergency assistance.
+
+        h3 Federal
+        ul.tracker__list
+          li.list-item 
+            a(href="www.usa.gov") www.usa.gov
+          li.list-item
+            a(href="www.disasterassistance.gov") www.disasterassistance.gov
+          li.list-item 
+            a(href="www.fema.gov") www.fema.gov
+
+        h3 State
+        ul.tracker__list
+          li.list-item 
+            a(href="#") Texas Division of Emergency Management.
+          li.list-item 
+            a(href="#") Texas Department of State Health Services
+
+        h3 County
+        ul.tracker__list
+          li.list-item 
+            a(href="http://www.harriscountytx.gov") http://www.harriscountytx.gov
+
+        h3 City
+        ul.tracker__list
+          li.list-item 
+            a(href="#") City of Houston
+          li.list-item 
+            a(href="#") City of Houston 3-1-1 Help and Info
+            
+      #review-answers.tracker__section
+        .tracker__accordion
+          a.tracker__button.tracker__button--accordion Review Answers
+          
+          ul.tracker__list
+            li.list-item
+              | You’re filled this out for yourself.
+            li.list-item
+              | You can be reached at #[a(href="#") 713-555-1212] and #[a(href="#") harveystationhouston@gmail.com]
+            li.list-item
+              | You need support for dialysis.
+            li.list-item
+              | Your address is 1301 Fannin St, Houston, 77002
+            li.list-item
+              | 4 adults and children in your party.
+            li.list-item
+              | You need help finding your automobile.
+            li.list-item
+              | You need shelter now.
+            li.list-item
+              | You need long-term food supplies.
+            li.list-item
+              | Your property was damaged.
+            li.list-item
+              | You are the property owner.
+            li.list-item
+              | I have insurance and need contact info and reporting tips.
+            li.list-item
+              | You need help mucking.
+              
+          p
+            a(href="#") Edit answers
+
+        p 
+          | Your information will be used to guide you through this incident and improve this service. No identifying information will be retained after the recovery period.
+        p 
+          | #[a(href="#") Click here to stop updates and delete yourself from the system now.]
+        p
+          | This service and site are for general information, not legal advice. Only obtain legal advice from a lawyer. All information here should be current and legal, but accuracy cannot be guaranteed.
