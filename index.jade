@@ -1,6 +1,6 @@
 header.tracker__header
   .wrapper
-    h1 Recovery <span class="callout">Status Tracker<span>
+    h1 #[span.callout Harvey] Recovery Status
 
 .wrapper
 
@@ -12,19 +12,19 @@ header.tracker__header
           p.date Thursday, 9/9/2017
         p.tracker__update-details 
           | Updates will be sent to #[a(href="#") 713&#8209;555&#8209;1212] and #[a(href="#") harveystationhouston@gmail.com.]
-        a.tracker__button(href="#") Check for updates
+        a.tracker__button(href="#") Check Updates
         
     .tracker__left
       .tracker__alert--first-time
         p 
-          | #[strong Since this is your first time completing the tracker,] please start by confirming that your area has been declared for FEMA assistance. FEMA is the Federal Emergency Management Agency. When the US President makes a Declaration of Disaster, FEMA administers relief for individuals and business owners who sustained damage and losses.
+          | #[strong Since this is your first time completing the tracker,] please confirm that your area has been declared for FEMA assistance. FEMA is the Federal Emergency Management Agency. When the US President makes a Declaration of Disaster, FEMA administers relief for individuals and business owners who sustained damage and&nbsplosses.
         
       #intro.tracker__section
-        p Hi, {name}
+        p Hi,
 
         p Thanks for completing the survey, designed to deliver just the info you need.
 
-        p Since it’s your first time, please start by confirming that your area has been declared for FEMA assistance. FEMA is the Federal Emergency Management Agency. When the President makes a Declaration of Disaster, FEMA administers relief for individuals and business owners who sustained damage and losses.
+        p Since it’s your first time, please confirm that your area has been declared for FEMA assistance. FEMA is the Federal Emergency Management Agency. When the President makes a Declaration of Disaster, FEMA administers relief for individuals and business owners who sustained damage and&nbsp;losses.
         
       #what-to-do.tracker__section
         h2 Do
@@ -32,7 +32,7 @@ header.tracker__header
           li.list-item
             input.checkbox(type="checkbox" id="item1" name="item1" value="item1")
             label.label(for="item1")
-              | Find short-term shelter close to 1301 Fannin St #[a(href="https://johnnyqbui.github.io/Houston-Shelters/") on this map] and #[a(href="http://www.chron.com/news/houston-weather/hurricaneharvey/article/houston-shelters-hurricane-harvey-12012951.php") this site.]
+              | Find short-term shelter close to 1301 Fannin St #[a(href="https://johnnyqbui.github.io/Houston-Shelters/") on this map] and #[a(href="http://www.chron.com/news/houston-weather/hurricaneharvey/article/houston-shelters-hurricane-harvey-12012951.php") this site]
           
           li.list-item
             input.checkbox(type="checkbox" id="item2" name="item2" value="item2")
@@ -69,7 +69,11 @@ header.tracker__header
             label.label(for="item8")
               | #[a(href="https://www.texasrescuemap.com/muckmap") Find mucking resources and cleanup tips at Texas Muck Map]
 
-        
+        h3 Completed
+        ul#completed-to-do.tracker__list
+          li.list-item.list-item--complete
+            | Complete survey
+
       #know.tracker__section
         h2 Know
         ul.tracker__list
@@ -78,7 +82,7 @@ header.tracker__header
           li.list-item
             | #[a(href="http://asd.fema.gov/inter/locator/home.htm") You can get help in person from a FEMA Disaster Recovery Center]
           li.list-item
-            | #[a(href="https://www.fema.gov/media-library-data/1504483560615-c91b07f455be16d5eff4cf30f3b82dfe/FINAL-9.3-version-after-applying-01_large.jpg") What to expect after you apply for FEMA assistance.]
+            | #[a(href="https://www.fema.gov/media-library-data/1504483560615-c91b07f455be16d5eff4cf30f3b82dfe/FINAL-9.3-version-after-applying-01_large.jpg") What to expect after you apply for FEMA assistance]
           li.list-item
             | #[a(href="http://www.fema.gov/mobile-app") FEMA has an app] with additional resources
           li.list-item
@@ -92,74 +96,76 @@ header.tracker__header
           li.list-item
             | #[a(href="https://www.airbnb.com/disaster-response") Airbnb has a Disaster Response Program] that may help locate housing
           li.list-item
-            | Find volunteer lawyers at Houston Volunteer Lawyers and Lone Star Legal Aid
+            | Find volunteer lawyers at #[a(href="https://www.makejusticehappen.org") Houston Volunteer Lawyers] and #[a(href="http://lonestarlegal.org") Lone Star Legal Aid]
 
         
       #weather.tracker__section
-        iframe#forecast_embed(frameborder="0" height="245" width="100%" src="//forecast.io/embed/#lat=29.7604&lon=-95.3698&name=Houston&color=#1E2383")
+        <a class="weatherwidget-io" href="https://forecast7.com/en/29d76n95d37/houston/?unit=us" data-font="Arial" data-days="3" data-theme="original" data-baseColor="" data-accent="" data-textColor="#383849" data-highColor="#383849" data-lowColor="#383849" data-sunColor="#4B53DC" data-moonColor="#4B53DC" data-cloudColor="#383849" data-rainColor="#383849" data-snowColor="#383849" ></a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io/js/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");</script>
       
       #more-information.tracker__section
-        h2 More
-        p Call 9-1-1 for emergencies requiring immediate assistance from the police/sheriff, the fire department or an ambulance. 
-        p If you are ever in doubt of whether a situation is an emergency, call 9-1-1. Be safe and let the 9-1-1 call taker determine if you need emergency assistance.
+        #answer-accordion.tracker__accordion
+          a#answer-button.tracker__button.tracker__button--accordion More
 
-        h3 Federal
-        ul.tracker__list
-          li.list-item 
-            a(href="www.usa.gov") www.usa.gov
-          li.list-item
-            a(href="www.disasterassistance.gov") www.disasterassistance.gov
-          li.list-item 
-            a(href="www.fema.gov") www.fema.gov
+          p Call 9-1-1 for emergencies requiring immediate assistance from the law, fire department or an ambulance.
+          p If you question whether it’s an emergency, call 9-1-1. Be safe and let the 9-1-1 call-taker determine if you need emergency assistance.
 
-        h3 State
-        ul.tracker__list
-          li.list-item 
-            a(href="#") Texas Division of Emergency Management.
-          li.list-item 
-            a(href="#") Texas Department of State Health Services
+          h3 Federal
+          ul.tracker__list
+            li.list-item 
+              a(href="www.usa.gov") www.usa.gov
+            li.list-item
+              a(href="www.disasterassistance.gov") www.disasterassistance.gov
+            li.list-item 
+              a(href="www.fema.gov") www.fema.gov
 
-        h3 County
-        ul.tracker__list
-          li.list-item 
-            a(href="http://www.harriscountytx.gov") http://www.harriscountytx.gov
+          h3 State
+          ul.tracker__list
+            li.list-item 
+              a(href="#") Texas Division of Emergency Management
+            li.list-item 
+              a(href="#") Texas Department of State Health Services
 
-        h3 City
-        ul.tracker__list
-          li.list-item 
-            a(href="#") City of Houston
-          li.list-item 
-            a(href="#") City of Houston 3-1-1 Help and Info
+          h3 County
+          ul.tracker__list
+            li.list-item 
+              a(href="http://www.harriscountytx.gov") http://www.harriscountytx.gov
+
+          h3 City
+          ul.tracker__list
+            li.list-item 
+              a(href="#") City of Houston
+            li.list-item 
+              a(href="#") City of Houston 3-1-1 Help and Info
             
-      #review-answers.tracker__section
         #answer-accordion.tracker__accordion
           a#answer-button.tracker__button.tracker__button--accordion Review Answers
           
           ul.tracker__list
             li.list-item
-              | You’re filled this out for yourself.
+              | You’re filled this out for yourself
             li.list-item
               | You can be reached at #[a(href="#") 713-555-1212] and #[a(href="#") harveystationhouston@gmail.com]
             li.list-item
-              | You need support for dialysis.
+              | You need support for dialysis
             li.list-item
               | Your address is 1301 Fannin St, Houston, 77002
             li.list-item
-              | 4 adults and children in your party.
+              | 4 adults and children in your party
             li.list-item
-              | You need help finding your automobile.
+              | You need help finding your automobile
             li.list-item
-              | You need shelter now.
+              | You need shelter now
             li.list-item
-              | You need long-term food supplies.
+              | You need long-term food supplies
             li.list-item
-              | Your property was damaged.
+              | Your property was damaged
             li.list-item
-              | You are the property owner.
+              | You are the property owner
             li.list-item
-              | I have insurance and need contact info and reporting tips.
+              | I have insurance and need contact info and reporting tips
             li.list-item
-              | You need help mucking.
+              | You need help mucking
               
           p
             a(href="#") Edit answers

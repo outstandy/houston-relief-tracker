@@ -29,7 +29,7 @@ h2
   text-transform: uppercase
 
 h3
-  color: $black
+  color: $purple--dark
   font-size: 1rem
   font-weight: bold
   margin-bottom: $space
@@ -183,6 +183,10 @@ strong
       margin-bottom: $space
       position: relative
 
+      &--complete
+        font-style: italic
+        text-decoration: line-through
+
   &__accordion
     background: white
     border: 1px solid $purple
@@ -217,6 +221,7 @@ strong
     display: inline-block
     height: 20px
     left: 5px
+    top: 2px
     position: absolute
     width: 20px
 
@@ -233,12 +238,8 @@ strong
     border-bottom: 2px solid white;
     position: absolute
     left: 10px
-    top: 5px
+    top: 7px
     transform: rotate(-50deg);
-
-  &--complete
-    font-style: italic
-    text-decoration: line-through
 
 input[type="checkbox"] + .label
   &:after
@@ -250,3 +251,7 @@ input[type="checkbox"]:checked + .label
 
   &:after
     content: "";
+
+//Weather style overrides
+#weather
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
