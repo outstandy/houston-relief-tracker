@@ -28,49 +28,54 @@ header.tracker__header
         
       #what-to-do.tracker__section
         h2 Do
-        ol.tracker__list
-          li.list-item
+        ol#to-do-list.tracker__list
+          li.list-item.list-item--to-do
             input.checkbox(type="checkbox" id="item1" name="item1" value="item1")
             label.label(for="item1")
               | Find short-term shelter close to 1301 Fannin St #[a(href="https://johnnyqbui.github.io/Houston-Shelters/") on this map] and #[a(href="http://www.chron.com/news/houston-weather/hurricaneharvey/article/houston-shelters-hurricane-harvey-12012951.php") this site]
           
-          li.list-item
+          li.list-item.list-item--to-do
             input.checkbox(type="checkbox" id="item2" name="item2" value="item2")
             label.label(for="item2")
               | #[a(href="http://www.DisasterAssistance.gov") Register for disaster assistance at FEMA]
               
-          li.list-item
+          li.list-item.list-item--to-do
             input.checkbox(type="checkbox" id="item3" name="item3" value="item3")
             label.label(for="item3")
               | Get dialysis or related procedures at TEEC toll-free at #[a(href="tel:8664073773") 866-407-ESRD] or #[a(href="www.texasteec.org") www.texasteec.org]
           
-          li.list-item
+          li.list-item.list-item--to-do
             input.checkbox(type="checkbox" id="item4" name="item4" value="item4")
             label.label(for="item4")
               | #[a(href="https://www.fema.gov/housing-resources") Find long-term housing resources at FEMA]
 
-          li.list-item
+          li.list-item.list-item--to-do
             input.checkbox(type="checkbox" id="item5" name="item5" value="item5")
             label.label(for="item5")
               | #[a(href="http://www.houstonisd.org/harvey") Find school schedules at HISD] 
 
-          li.list-item
+          li.list-item.list-item--to-do
             input.checkbox(type="checkbox" id="item6" name="item6" value="item6")
             label.label(for="item6")
               | #[a(href="http://www.findmytowedcar.com") Locate your automobile,] if towed by the City of Houston
 
-          li.list-item
+          li.list-item.list-item--to-do
             input.checkbox(type="checkbox" id="item7" name="item7" value="item7")
             label.label(for="item7")
               | Find long-term food supplies at FEMA
 
-          li.list-item
+          li.list-item.list-item--to-do
             input.checkbox(type="checkbox" id="item8" name="item8" value="item8")
             label.label(for="item8")
+              | Find long-term food supplies through the #[a(href="http://www.houstonfoodbank.org/services/if-you-need-food") Houston Food Bank] and the #[a(href="https://www.fns.usda.gov/disaster/texas-disaster-nutrition-assistance") USDA]
+
+          li.list-item.list-item--to-do
+            input.checkbox(type="checkbox" id="item9" name="item9" value="item9")
+            label.label(for="item9")
               | #[a(href="https://www.texasrescuemap.com/muckmap") Find mucking resources and cleanup tips at Texas Muck Map]
 
         h3 Completed
-        ul#completed-to-do.tracker__list
+        ul#completed-to-do-list.tracker__list
           li.list-item.list-item--complete
             | Complete survey
 
@@ -98,14 +103,13 @@ header.tracker__header
           li.list-item
             | Find volunteer lawyers at #[a(href="https://www.makejusticehappen.org") Houston Volunteer Lawyers] and #[a(href="http://lonestarlegal.org") Lone Star Legal Aid]
 
-        
       #weather.tracker__section
         <a class="weatherwidget-io" href="https://forecast7.com/en/29d76n95d37/houston/?unit=us" data-font="Arial" data-days="3" data-theme="original" data-baseColor="" data-accent="" data-textColor="#383849" data-highColor="#383849" data-lowColor="#383849" data-sunColor="#4B53DC" data-moonColor="#4B53DC" data-cloudColor="#383849" data-rainColor="#383849" data-snowColor="#383849" ></a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://weatherwidget.io/js/widget.min.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","weatherwidget-io-js");</script>
       
       #more-information.tracker__section
-        #answer-accordion.tracker__accordion
-          a#answer-button.tracker__button.tracker__button--accordion More
+        #more-accordion.tracker__accordion
+          a#more-button.tracker__button.tracker__button--accordion More
 
           p Call 9-1-1 for emergencies requiring immediate assistance from the law, fire department or an ambulance.
           p If you question whether it’s an emergency, call 9-1-1. Be safe and let the 9-1-1 call-taker determine if you need emergency assistance.
@@ -176,3 +180,9 @@ header.tracker__header
           | #[a(href="#") Click here to stop updates and delete yourself from the system now.]
         p
           | This service and site are for general information, not legal advice. Only obtain legal advice from a lawyer. All information here should be current and legal, but accuracy cannot be guaranteed.
+      
+      #feedback.tracker__section
+        .tracker__inline-cta
+          p Did you find this tool useful?
+          a.tracker__button.tracker__button--inline-cta(href="#") Yes
+          p.inline-cta-text or #[a(href="#") report broken links and other feedback]

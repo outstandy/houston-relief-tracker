@@ -187,6 +187,9 @@ strong
         font-style: italic
         text-decoration: line-through
 
+        a
+          color: $black
+
   &__accordion
     background: white
     border: 1px solid $purple
@@ -199,6 +202,21 @@ strong
 
     &.open
       height: 100%
+
+  &__inline-cta
+    @media(max-width: 640px)
+      text-align: center
+
+    .inline-cta-text,
+    .tracker__button
+      display: inline-block;
+
+    .tracker__button
+      margin: 0 10px $space 0
+      width: 25%
+
+      @media(max-width: 640px)
+        width:100%
 
 .checkbox[type="checkbox"]
   opacity: 0
