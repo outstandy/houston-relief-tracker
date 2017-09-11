@@ -1,13 +1,12 @@
-const answerAccordion = document.getElementById("answer-accordion")
-const answerButton = document.getElementById("answer-button")
 const toDoList = document.getElementById("to-do-list")
 const toDoListItems = Array.from(document.getElementsByClassName("list-item--to-do"))
 const completedToDoList = document.getElementById("completed-to-do-list")
+const accordionButtons = Array.from(document.getElementsByClassName("tracker__button--accordion"))
 
 document.addEventListener("DOMContentLoaded",function(){
 
   function removeToDo(){
-    toDoListItems.forEach(function(item, index){
+    toDoListItems.forEach(function(item){
       item.addEventListener("click", function(){
 
         let listItem = document.createElement("li")
@@ -21,10 +20,16 @@ document.addEventListener("DOMContentLoaded",function(){
     })
   }
 
-  answerButton.addEventListener("click", function(){
-    answerAccordion.classList.toggle("open")
-    answerButton.classList.toggle("open")
-  })
+  function toggleAccordion(){
+    accordionButtons.forEach(function(button){
+      button.addEventListener("click", function(){
+        console.log("click")
+        this.classList.toggle("open")
+        this.closest(".tracker__accordion").classList.toggle("open")
+      })
+    })
+  }
 
   removeToDo();
+  toggleAccordion();
 });
