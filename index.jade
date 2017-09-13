@@ -12,7 +12,7 @@ header.tracker__header
           p.date Thursday, 9/9/2017
         p.tracker__update-details 
           | Updates will be sent to #[a(href="#") 713&#8209;555&#8209;1212] and #[a(href="#") harveystationhouston@gmail.com.]
-        a.tracker__button(href="#") Check Updates
+        a#update-button.tracker__button.tracker__button--confirm(href="#") Check Updates
         
     .tracker__left
       .tracker__alert--first-time
@@ -177,12 +177,12 @@ header.tracker__header
         p 
           | Your information will be used to guide you through this incident and improve this service. No identifying information will be retained after the recovery period.
         p 
-          | #[a(href="#") Click here to stop updates and delete yourself from the system now.]
+          | #[a(href="./removed-user.html") Click here to stop updates and delete yourself from the system now.]
         p
           | This service and site are for general information, not legal advice. Only obtain legal advice from a lawyer. All information here should be current and legal, but accuracy cannot be guaranteed.
       
       #feedback.tracker__section
         .tracker__inline-cta
           p Did you find this tool useful?
-          a.tracker__button.tracker__button--inline-cta(href="#") Yes
+          a#useful-button.tracker__button.tracker__button--inline-cta.tracker__button--confirm(href="#") Yes
           p.inline-cta-text or #[a(href="#") report broken links and other feedback]

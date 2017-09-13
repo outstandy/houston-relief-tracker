@@ -2,6 +2,7 @@ const toDoList = document.getElementById("to-do-list")
 const toDoListItems = Array.from(document.getElementsByClassName("list-item--to-do"))
 const completedToDoList = document.getElementById("completed-to-do-list")
 const accordionButtons = Array.from(document.getElementsByClassName("tracker__button--accordion"))
+const confirmButtons = Array.from(document.getElementsByClassName("tracker__button--confirm"))
 
 document.addEventListener("DOMContentLoaded",function(){
 
@@ -23,13 +24,31 @@ document.addEventListener("DOMContentLoaded",function(){
   function toggleAccordion(){
     accordionButtons.forEach(function(button){
       button.addEventListener("click", function(){
-        console.log("click")
         this.classList.toggle("open")
         this.closest(".tracker__accordion").classList.toggle("open")
       })
     })
   }
 
+  function updateButton(){
+    confirmButtons.forEach(function(button){
+      button.addEventListener("click", function(){
+        event.preventDefault();
+        button.classList.add("confirmed")
+        if(button.id == "update-button"){
+          button.innerHTML = "Checked!"
+          setTimeout(function(){
+            button.classList.remove("confirmed")
+            button.innerHTML = "Check Updates"
+          }, 10000)
+        }else if(button.id == "useful-button"){
+          button.innerHTML = "Thanks!"
+        }
+      })
+    })
+  }
+
   removeToDo();
   toggleAccordion();
+  updateButton();
 });

@@ -1,5 +1,5 @@
 @import 'variables'
-
+@import 'removal'
 *
   margin: 0
   padding: 0
@@ -164,6 +164,16 @@ strong
       &.open
         &:after
           transform: rotate(135deg)
+
+    &--confirm
+      border: 1px solid $purple
+
+    &.confirmed
+      background: $bg
+      border: 1px solid $purple
+      color: $purple
+      pointer-events: none
+      position: relative
 
   &__alert
     &--first-time
